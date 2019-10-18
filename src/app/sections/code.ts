@@ -16,338 +16,338 @@ export const CODESECTIONS: Section[] = [
     name: "Player Details",
     type: SectionType.Section,
     children : [
-    {
-        name: "Player Name",
-        type: SectionType.SubSection,
-        children : [
         {
-            name: "Player Name In Full",
-            type: SectionType.Input,
-            id: "Player Name",
-            required: true,
-            columnSpan: 8,
-        }
-        ],
-    },
-    {
-        name: "Club Details",
-        type: SectionType.SubSection,
-        children : [
-        {
-            name: "Player Registration Number",
-            type: SectionType.Input,
-            id: "Player Registration Number",
-            columnSpan: 2,
+            name: "Player Name",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Player Name In Full",
+                type: SectionType.Input,
+                id: "Player Name",
+                required: true,
+                columnSpan: 8,
+            }
+            ],
         },
         {
-            name: "Club Name of Player",
-            type: SectionType.Input,
-            id: "Club Name of Player",
-            columnSpan: 4,
+            name: "Club Details",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Player Registration Number",
+                type: SectionType.Input,
+                id: "Player Registration Number",
+                columnSpan: 2,
+            },
+            {
+                name: "Club Name of Player",
+                type: SectionType.Input,
+                id: "Club Name of Player",
+                columnSpan: 4,
+            },
+            {
+                name: "State",
+                id: "Club Details State",
+                type: SectionType.Input,
+                columnSpan: 2,
+            }
+            ],
         },
         {
-            name: "State",
-            id: "Club Details State",
-            type: SectionType.Input,
-            columnSpan: 2,
-        }
-        ],
-    },
-    {
-        name: "League Details",
-        type: SectionType.SubSection,
-        children : [
-        {
-            name: "League e.g., Saturday Men, Sunday Junior, ...",
-            type: SectionType.Input,
-            id: "League",
-            columnSpan: 4,
+            name: "League Details",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "League e.g., Saturday Men, Sunday Junior, ...",
+                type: SectionType.Input,
+                id: "League",
+                columnSpan: 4,
+            },
+            {
+                name: "Division e.g., Ladies Div 1, Midweek, ...",
+                type: SectionType.Input,
+                id: "Division",
+                columnSpan: 4,
+            },
+            ],
         },
         {
-            name: "Division e.g., Ladies Div 1, Midweek, ...",
-            type: SectionType.Input,
-            id: "Division",
-            columnSpan: 4,
-        },
-        ],
-    },
-    {
-        name: "Location",
-        type: SectionType.SubSection,
-        children : [
-        {
-            name: "Host Club",
-            type: SectionType.Input,
-            id: "Host Club",
-            columnSpan: 4,
-        },
-        {
-            name: "Suburb/City",
-            type: SectionType.Input,
-            id: "Host Club Suburb",
-            columnSpan: 2,
-        },
-        {
-            name: "State",
-            type: SectionType.Input,
-            id: "Host Club State",
-        },
-        {
-            name: "Postcode",
-            type: SectionType.Input,
-            id: "Host Club Postcode",
-        },
-        ],
-    },
-    {
-        name: "Teams",
-        type: SectionType.SubSection,
-        children : [
-        {
-            name: "Team 1",
-            type: SectionType.Input,
-            children : [],
-            id: "Team 1",
-            columnSpan: 3,
+            name: "Location",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Host Club",
+                type: SectionType.Input,
+                id: "Host Club",
+                columnSpan: 4,
+            },
+            {
+                name: "Suburb/City",
+                type: SectionType.Input,
+                id: "Host Club Suburb",
+                columnSpan: 2,
+            },
+            {
+                name: "State",
+                type: SectionType.Input,
+                id: "Host Club State",
+            },
+            {
+                name: "Postcode",
+                type: SectionType.Input,
+                id: "Host Club Postcode",
+            },
+            ],
         },
         {
-            name: "vs",
-            type: SectionType.Label,
-            children : [],
-            columnSpan: 2,
+            name: "Teams",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Team 1",
+                type: SectionType.Input,
+                children : [],
+                id: "Team 1",
+                columnSpan: 3,
+            },
+            {
+                name: "vs",
+                type: SectionType.Label,
+                children : [],
+                columnSpan: 2,
+            },
+            {
+                name: "Team 2",
+                type: SectionType.Input,
+                children : [],
+                id: "Team 2",
+                columnSpan: 3,
+            },
+            ],
         },
-        {
-            name: "Team 2",
-            type: SectionType.Input,
-            children : [],
-            id: "Team 2",
-            columnSpan: 3,
-        },
-        ],
-    },
     ],
 },
 {
     name: "Offence Details",
     type: SectionType.Section,
     children : [
-    {
-        name: "Violation",
-        type: SectionType.SubSection,
-        children : [
         {
-            name: "Violation Type",
-            type: SectionType.Dropdown,
+            name: "Violation",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Violation Type",
+                type: SectionType.Dropdown,
+                required: true,
+                key: "violationTypes",
+                id: "Violation Type",
+                emptyOption: "-> Viloation Type <-",
+                columnSpan: 8,
+            },
+            ],
+        },
+        {
+            name: "Comments regarding the Violation",
+            type: SectionType.SubSection,
             required: true,
-            key: "violationTypes",
-            id: "Violation Type",
-            emptyOption: "-> Viloation Type <-",
-            columnSpan: 8,
-        },
-        ],
-    },
-    {
-        name: "Comments regarding the Violation",
-        type: SectionType.SubSection,
-        required: true,
-        extra : {
-            rowSpan: 1,
-            height: 80,
-        },
-        children : [
-        {
-            name: "",
-            type: SectionType.MultilineInput,
-            id: "Comments regarding the Violation",
-            columnSpan: 8,
             extra : {
                 rowSpan: 1,
+                height: 80,
             },
-        },
-        ],
-    },
-    {
-        name: "Match Name",
-        type: SectionType.SubSection,
-        children : [
-        {
-            name: "Name of Event i.e., Singles or Doubles",
-            type: SectionType.Input,
-            value: "Singles",
-            id: "Name of Event",
-            columnSpan: 8,
-        },
-        ],
-    },
-    {
-        name: "Round & Date of Offence",
-        type: SectionType.SubSection,
-        children : [
-        {
-            name: "Round of Tennis League Fixture",
-            id: "Round of Tennis League Fixture",
-            type: SectionType.Input,
-            columnSpan: 4,
+            children : [
+            {
+                name: "",
+                type: SectionType.MultilineInput,
+                id: "Comments regarding the Violation",
+                columnSpan: 8,
+                extra : {
+                    rowSpan: 1,
+                },
+            },
+            ],
         },
         {
-            name: "Date of Offence",
-            type: SectionType.DatePicker,
-            value: moment(),
-            id: "Date of Offence",
-            clearBetweenSessions: true,
-            controlOptions: {maxDate:moment()},
-            columnSpan: 4,
+            name: "Match Name",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Name of Event i.e., Singles or Doubles",
+                type: SectionType.Input,
+                value: "Singles",
+                id: "Name of Event",
+                columnSpan: 8,
+            },
+            ],
         },
-        ],
-    },
-    {
-        name: "Players involved",
-        type: SectionType.SubSection,
-        children : [
         {
-            name: "All players involved in Incident",
-            type: SectionType.Input,
-            id: "Players involved",
-            columnSpan: 8,
+            name: "Round & Date of Offence",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "Round of Tennis League Fixture",
+                id: "Round of Tennis League Fixture",
+                type: SectionType.Input,
+                columnSpan: 4,
+            },
+            {
+                name: "Date of Offence",
+                type: SectionType.DatePicker,
+                value: moment(),
+                id: "Date of Offence",
+                clearBetweenSessions: true,
+                controlOptions: {maxDate:moment()},
+                columnSpan: 4,
+            },
+            ],
         },
-        ],
-    },
+        {
+            name: "Players involved",
+            type: SectionType.SubSection,
+            children : [
+            {
+                name: "All players involved in Incident",
+                type: SectionType.Input,
+                id: "Players involved",
+                columnSpan: 8,
+            },
+            ],
+        },
     ],
 },
 {
     name: "Penalty Details",
     type: SectionType.Section,
     children: [
-    {
-        name: "Action Taken By Referee/Match Supervisor",
-        type: SectionType.SubSection,
-        children: [
         {
-            name: "Action Taken",
-            id: "Action Taken",
-            type: SectionType.Dropdown,
-            required: true,
-            key: "stepType",
-            emptyOption: "",
-            useEmptyOption: true,
-            columnSpan: 2,
-        },
-        {
-            type: SectionType.MultilineInput,
-            required: true,
-            id: "Action Taken Comment",
-            columnSpan: 6,
-            extra : {
-                height: 50,
+            name: "Action Taken By Referee/Match Supervisor",
+            type: SectionType.SubSection,
+            children: [
+            {
+                name: "Action Taken",
+                id: "Action Taken",
+                type: SectionType.Dropdown,
+                required: true,
+                key: "stepType",
+                emptyOption: "",
+                useEmptyOption: true,
+                columnSpan: 2,
             },
+            {
+                type: SectionType.MultilineInput,
+                required: true,
+                id: "Action Taken Comment",
+                columnSpan: 6,
+                extra : {
+                    height: 50,
+                },
+            },
+            ]
         },
-        ]
-    },
     ]
 },
 {
     name: "Referee/Match Supervisor",
     type: SectionType.Section,
     children: [
-    {
-        name: "Referee/Match Supervisor",
-        type: SectionType.SubSection,
-        children: [
         {
-            name: "Name of Referee/Match Supervisor",
-            id: "Name of Referee/Match Supervisor",
-            type: SectionType.Input,
-            required: true,
-            columnSpan: 6,
+            name: "Referee/Match Supervisor",
+            type: SectionType.SubSection,
+            children: [
+            {
+                name: "Name of Referee/Match Supervisor",
+                id: "Name of Referee/Match Supervisor",
+                type: SectionType.Input,
+                required: true,
+                columnSpan: 6,
+            },
+            {
+                name: "Certification (if applicable)",
+                id: "Certification Referee/Match Supervisor",
+                type: SectionType.Dropdown,
+                key: "certificationType",
+                useEmptyOption: true,
+                columnSpan: 2,
+            },
+            ]
         },
-        {
-            name: "Certification (if applicable)",
-            id: "Certification Referee/Match Supervisor",
-            type: SectionType.Dropdown,
-            key: "certificationType",
-            useEmptyOption: true,
-            columnSpan: 2,
-        },
-        ]
-    },
     ]
 },
 {
     name: "Witness Name (if applicable, should be neutral third party to the incident)",
     type: SectionType.Section,
     children: [
-    {
-        name: "Witness",
-        type: SectionType.SubSection,
-        children: [
         {
-            name: "Name",
-            id: "Witness Name",
-            type: SectionType.Input,
-            required: true,
-            columnSpan: 6,
+            name: "Witness",
+            type: SectionType.SubSection,
+            children: [
+            {
+                name: "Name",
+                id: "Witness Name",
+                type: SectionType.Input,
+                required: true,
+                columnSpan: 6,
+            },
+            {
+                name: "Phone",
+                id: "Witness Phone",
+                type: SectionType.Input,
+                columnSpan: 2,
+            },
+            ]
         },
-        {
-            name: "Phone",
-            id: "Witness Phone",
-            type: SectionType.Input,
-            columnSpan: 2,
-        },
-        ]
-    },
     ]
 },
 {
     name: "Report Copies",
     type: SectionType.Section,
     children: [
-    {
-        name: "Has a copy of this report been handed or sent to:",
-        type: SectionType.SubSection,
-        columnSpan: 10,
-        extra : {
-            alignmentVertical: 'center',
-            alignmentHorizontal: 'left',
-            rowSpan: 1,
-            height: 20,
+        {
+            name: "Has a copy of this report been handed or sent to:",
+            type: SectionType.SubSection,
+            columnSpan: 10,
+            extra : {
+                alignmentVertical: 'center',
+                alignmentHorizontal: 'left',
+                rowSpan: 1,
+                height: 20,
+            },
         },
-    },
-    {
-        name: "The offending player?",
-        type: SectionType.SubSection,
-        columnSpan: 8,
-        extra : {
-            alignmentVertical: 'center',
-            alignmentHorizontal: 'left',
-            rowSpan: 1,
-            height: 20,
+        {
+            name: "The offending player?",
+            type: SectionType.SubSection,
+            columnSpan: 8,
+            extra : {
+                alignmentVertical: 'center',
+                alignmentHorizontal: 'left',
+                rowSpan: 1,
+                height: 20,
+            },
+            children: [{type: SectionType.YesNo, extra : {rowSpan: 1,}},]
         },
-        children: [{type: SectionType.YesNo, extra : {rowSpan: 1,}},]
-    },
-    {
-        name: "Tennis West?",
-        type: SectionType.SubSection,
-        columnSpan: 8,
-        extra : {
-            alignmentVertical: 'center',
-            alignmentHorizontal: 'left',
-            rowSpan: 1,
-            height: 20,
+        {
+            name: "Tennis West?",
+            type: SectionType.SubSection,
+            columnSpan: 8,
+            extra : {
+                alignmentVertical: 'center',
+                alignmentHorizontal: 'left',
+                rowSpan: 1,
+                height: 20,
+            },
+            children: [{type: SectionType.YesNo, extra : {rowSpan: 1,}},]
         },
-        children: [{type: SectionType.YesNo, extra : {rowSpan: 1,}},]
-    },
-    {
-        name: "The home tennis club to keep on file?",
-        type: SectionType.SubSection,
-        columnSpan: 8,
-        extra : {
-            alignmentVertical: 'center',
-            alignmentHorizontal: 'left',
-            rowSpan: 1,
-            height: 20,
+        {
+            name: "The home tennis club to keep on file?",
+            type: SectionType.SubSection,
+            columnSpan: 8,
+            extra : {
+                alignmentVertical: 'center',
+                alignmentHorizontal: 'left',
+                rowSpan: 1,
+                height: 20,
+            },
+            children: [{type: SectionType.YesNo, extra : {rowSpan: 1,}},]
         },
-        children: [{type: SectionType.YesNo, extra : {rowSpan: 1,}},]
-    },
     ]
 },
 {
@@ -378,18 +378,18 @@ When THREE Penalty Points are reached, the Offending Player will receive a ONE M
     name: "Referee/Match Supervisor Signature",
     type: SectionType.Section,
     children: [
-    {
-        name: "Date",
-        type: SectionType.DatePicker,
-        value: moment(),
-        controlOptions: {maxDate:moment()},
-        columnSpan: 4,
-    },
-    {
-        name: "Signature",
-        type: SectionType.Input,
-        columnSpan: 6,
-    },
+        {
+            name: "Date",
+            type: SectionType.DatePicker,
+            value: moment(),
+            controlOptions: {maxDate:moment()},
+            columnSpan: 4,
+        },
+        {
+            name: "Signature",
+            type: SectionType.Input,
+            columnSpan: 6,
+        },
     ]
 },
 ];
