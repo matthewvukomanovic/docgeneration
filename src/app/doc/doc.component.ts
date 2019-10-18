@@ -10,7 +10,7 @@ import * as Excel2 from 'exceljs/modern.browser';
 
 import { Component, OnInit } from '@angular/core';
 import { Section } from '../section';
-import { SectionType } from '../SectionType';
+import { SectionType } from '../sectionType';
 import { SectionsService } from '../sections.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Document, Paragraph, Packer, TextRun, Table, WidthType, BorderStyle } from "docx";

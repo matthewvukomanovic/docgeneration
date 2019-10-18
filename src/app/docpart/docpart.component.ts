@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges, } from '@angular/core';
 import { Section } from '../section';
-import { SectionType } from '../SectionType';
+import { SectionType } from '../sectionType';
 import { DataService } from '../data.service';
 import {MatSelectModule} from '@angular/material/select';
 import { EnumService } from '../enum.service';
