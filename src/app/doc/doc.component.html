@@ -1,0 +1,7 @@
+<app-docpart *ngFor="let section of sections" [section]="section">
+</app-docpart>
+
+<button (click)="clearValues()">Clear Form</button>
+<button (click)="defaultValues()">Default Form</button>
+<button (click)="loadSavedValues()">Load Saved Values</button>
+<button (click)="generateXLSX()">Generate XLSX</button>
