@@ -19,21 +19,13 @@ export class DocpartComponent implements OnInit {
   constructor(private dataService: DataService, public enumService: EnumService, private cookieService: CookieService) { }
 
   ngOnInit() {
-    //debugger;
     if( this.section != null) {
-
-      if( this.section.name == "Violation" || this.section.name == "Certification (if applicable)") {
-        //debugger;
-      }
       if( this.section.type == SectionType.Dropdown) {
         if( this.section.key != undefined ) {
-          console.log(this.section.key);
           this.data = this.dataService.getData(this.section.key);
-          console.log(this.data);
         } else {
           console.log("a drop down does not have a key defined");
         }
-        //debugger;
       }
     }
   }
@@ -49,17 +41,4 @@ export class DocpartComponent implements OnInit {
       }
     }
   }
-
-  // itemChange($event: any) {
-  //   this.section.value == $event.currentTarget.value;
-  //    console.log($event.currentTarget.value);
-
-  //   // console.log($event.currentTarget.value);
-  //   // console.log($event);
-  // }
-
-  // ngOnChanges(changes: SimpleChanges) {
-  //   // changes.prop contains the old and the new value...
-  //   console.log(changes);
-  // }
 }
