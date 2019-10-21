@@ -1,5 +1,4 @@
 <!-- <div>{{section.type}}</div> -->
-
        <div *ngIf="section.type==enumService.SectionType.Section && section.excludeFromWebSite != true">
               <div class="stSection row">{{section.name}}</div>
               <app-docpart *ngFor="let child of section.children" [section]="child"></app-docpart>
