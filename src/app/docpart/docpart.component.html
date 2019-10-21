@@ -17,8 +17,7 @@
                      <textarea style="width:100%" [(ngModel)]="section.value" (change)="itemChange($event)" placeholder="{{section.name}}"></textarea>
               </div>
        </div>
-
-       <!-- <div *ngIf="section.type==enumService.SectionType.Dropdown  && section.excludeFromWebSite != true" class="col">
+       <div *ngIf="section.type==enumService.SectionType.Dropdown  && section.excludeFromWebSite != true" class="col">
               <mat-form-field>
                      <mat-label>{{section.name}}</mat-label>
                      <mat-select [(value)]="section.value" (selectionChange)="itemChange($event)">
@@ -45,6 +44,9 @@
        <div *ngIf="section.type==enumService.SectionType.SubSectionHeading && section.excludeFromWebSite != true" class="row">
               {{section.name}}
        </div>
+       <!--
+
        <div *ngIf="(section.type > enumService.SectionType.SubSectionHeading || section.type<enumService.SectionType.Section)  && section.excludeFromWebSite != true">
               Unknown {{section.name}} {{section.type}}
-       </div>               -->
+       </div>
+       -->
