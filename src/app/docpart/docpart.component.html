@@ -1,52 +1,6 @@
-<!-- <div>{{section.type}}</div> -->
-       <div *ngIf="section.type==enumService.SectionType.Section && section.excludeFromWebSite != true">
-              <div class="stSection row">{{section.name}}</div>
-              <app-docpart *ngFor="let child of section.children" [section]="child"></app-docpart>
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.SubSection  && section.excludeFromWebSite != true" class="stSubSection row">
-              <div class="col-2">{{section.name}}</div>
-              <app-docpart *ngFor="let child of section.children" [section]="child"></app-docpart>
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.Input  && section.excludeFromWebSite != true"  class="col">
-              <div class="row">
-                            <input style="width:100%" [(ngModel)]="section.value" (change)="itemChange($event)" placeholder="{{section.name}}"/>
-              </div>
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.MultilineInput  && section.excludeFromWebSite != true" class="col">
-              <div class="row">
-                     <textarea style="width:100%" [(ngModel)]="section.value" (change)="itemChange($event)" placeholder="{{section.name}}"></textarea>
-              </div>
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.Dropdown  && section.excludeFromWebSite != true" class="col">
-              <mat-form-field>
-                     <mat-label>{{section.name}}</mat-label>
-                     <mat-select [(value)]="section.value" (selectionChange)="itemChange($event)">
-                            <mat-option *ngIf="section.emptyOption || section.useEmptyOption">{{section.emptyOption}}</mat-option>
-                            <mat-option *ngFor="let item of data" value="{{item}}">{{item}}</mat-option>
-                     </mat-select>
-              </mat-form-field>
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.Label  && section.excludeFromWebSite != true"  class="col">
-              {{section.name}}
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.DatePicker  && section.excludeFromWebSite != true" class="col">
-              <mat-form-field>
-                     <input matInput [matDatepicker]="picker" [max]="section.controlOptions.maxDate" placeholder="{{section.name}}" [(value)]="section.value"
-                     (dateInput)="itemChange($event)" (dateChange)="itemChange($event)"
-                     >
-                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                     <mat-datepicker touchUi #picker></mat-datepicker>
-              </mat-form-field>
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.YesNo && section.excludeFromWebSite != true" class="col">
-              {{section.name}} yes / no
-       </div>
-       <div *ngIf="section.type==enumService.SectionType.SubSectionHeading && section.excludeFromWebSite != true" class="row">
-              {{section.name}}
-       </div>
-       <!--
-
-       <div *ngIf="(section.type > enumService.SectionType.SubSectionHeading || section.type<enumService.SectionType.Section)  && section.excludeFromWebSite != true">
-              Unknown {{section.name}} {{section.type}}
-       </div>
-       -->
+<ng-template #fragment>
+       <ng-container>
+              Testing 1234
+              Something else
+       </ng-container>
+</ng-template>

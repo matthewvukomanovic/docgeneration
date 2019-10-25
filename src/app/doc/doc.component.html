@@ -1,9 +1,10 @@
-<div class="container">
-<app-docpart *ngFor="let section of sections" [section]="section">
-</app-docpart>
-</div>
-
-<button (click)="clearValues()">Clear Form</button>
-<button (click)="defaultValues()">Default Form</button>
-<button (click)="loadSavedValues()">Load Saved Values</button>
-<button (click)="generateXLSX()">Generate XLSX</button>
+    <ng-container *ngFor="let section of sections">
+            <ng-container
+            *ngTemplateOutlet="wrap || defaultWrap;context:{outlet:defaultWrap}">
+            </ng-container>
+            <ng-template #defaultWrap="">
+                <ng-container app-docpart
+                    [section]="section"
+                ></ng-container>
+            </ng-template>
+    </ng-container>

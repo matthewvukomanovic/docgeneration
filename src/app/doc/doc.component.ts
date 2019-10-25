@@ -8,7 +8,7 @@ import * as Excel from "exceljs/dist/exceljs.min.js";
 //import * as Excel from "exceljs/browser";
 import * as Excel2 from 'exceljs/modern.browser';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChild, TemplateRef, ElementRef } from '@angular/core';
 import { Section } from '../section';
 import { SectionType } from '../sectionType';
 import { SectionsService } from '../sections.service';
@@ -35,6 +35,7 @@ const moment = _moment;
 export class DocComponent implements OnInit {
   sections : Section[];
   idSectionLookup : any;
+  @ContentChild("wrap", { static: false }) wrap:TemplateRef<ElementRef>
 
   constructor(private sectionsService: SectionsService, private cookieService: CookieService) { }
 
