@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DocpartComponent } from './docpart/docpart.component';
+import { DocpartComponent, DocpartDeclarations } from './docpart/docpart.component';
 import { DocComponent } from './doc/doc.component';
 import { CookieService } from "ngx-cookie-service";
 import { MaterialModule } from "./material-module";
@@ -49,6 +49,7 @@ export const MY_FORMATS = {
      {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
     //{provide: MAT_DATE_LOCALE, useValue: 'en-AU'},
  ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  entryComponents: [ DocpartDeclarations[0] ],
 })
 export class AppModule { }

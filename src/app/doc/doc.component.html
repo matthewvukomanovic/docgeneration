@@ -1,10 +1,30 @@
     <ng-container *ngFor="let section of sections">
-            <ng-container
+            <!-- <ng-container
             *ngTemplateOutlet="wrap || defaultWrap;context:{outlet:defaultWrap}">
-            </ng-container>
-            <ng-template #defaultWrap="">
+            </ng-container> -->
+            <!-- <ng-template #defaultWrap="">
+                <ng-container app-docpart
+                ></ng-container>
                 <ng-container app-docpart
                     [section]="section"
                 ></ng-container>
-            </ng-template>
+
+            </ng-template> -->
     </ng-container>
+
+<ng-container
+*ngTemplateOutlet="wrap || defaultWrap;context:{outlet:defaultWrap}">
+</ng-container>
+<ng-template #defaultWrap="">
+    <ng-container app-docpart
+    ></ng-container>
+    <!-- <ng-container app-docpart
+        [section]="section"
+    ></ng-container> -->
+
+</ng-template>
+<ng-template #wrap="" let-outlet="outlet">
+        <div style="flex-grow:1">
+          <ng-template *ngTemplateOutlet="outlet"></ng-template>
+        </div>
+      </ng-template>
